@@ -1,0 +1,642 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>AZURE -AZ900</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="244ec9dd-ac76-45f5-b742-8c50199e16c5" class="page sans"><header><img class="page-cover-image" src="AZURE%20-AZ900%20d1bcd6148f0c4ce68c718983df0d4179/CAPA_FINAL.jpg" style="object-position:center 50%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🖥️</span></div><h1 class="page-title">AZURE -AZ900</h1></header><div class="page-body"><h1 id="408565b7-c71f-4195-8fec-4f9183311c38" class="">Como funciona a nuvem.</h1><ul id="d97b0ca6-9a79-46f2-b2c2-f2cfd1e58630" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid"><em><strong>Alta Disponibilidade (High Availability)</strong></em></span></summary><ul id="b998ee3b-5617-4dc0-aaf4-4f227dcbc810" class="bulleted-list"><li>A nuvem é um recurso que eu consigo prover de forma fácil, caso um site quebre, seja o banco ou outra aplicação, eu posso ter uma replica que impeça que o site fique fora do ar e eu possa estar atendendo os clientes.</li></ul></details></li></ul><ul id="ae269753-f6d4-4a2e-b166-1abf383c17c9" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid"><em><strong>Geo-Distrubuição (Geo-Distribution)</strong></em></span></summary><ul id="ebfc241f-39b6-455d-b2f6-8d16a28d5580" class="bulleted-list"><li>Combinando a <span style="border-bottom:0.05em solid"><strong>Alta Disponibilidade</strong></span> com a <span style="border-bottom:0.05em solid"><strong>Geo-Distribuição,</strong></span> temos um <span style="border-bottom:0.05em solid"><strong>Slaas</strong></span>  a própria  distribuição geográfica e mecanismos de redundância facilita e propiciam para que eu tenha um alta disponibilidade</li></ul><ul id="2a77b870-5583-4d6d-8451-59326ae5dab4" class="bulleted-list"><li>OBS: Não é necessário estar em sites ou regiões diferentes,  mas para ter uma alta disponibilidade eu posso ter duas maquinas em data centers diferentes ou em um mesmo data center, mas o que realmente importara é você garantir que o seu produto ou tecnologia de TI &quot;sempre estará disponível&quot;.</li></ul></details></li></ul><ul id="192f027f-38c5-4868-b24d-2802b7138aba" class="toggle"><li><details open=""><summary><em><span style="border-bottom:0.05em solid"><strong>Escalabilidade (Scalability)</strong></span></em></summary><ul id="f516057b-d42f-4dc4-af4a-ff6d291e69d2" class="bulleted-list"><li>Caso eu precise escalar duas maquinas virtuais, eu consigo expandir rapidamente a capacidade computacional.</li></ul><ul id="f3855aea-92da-4af9-8e7e-59e3f09f9493" class="bulleted-list"><li>Escalabilidade pode se trabalhar na vertical ou na horizontal.</li></ul><ul id="bdf4814a-3611-4dca-885a-3154d6b5a325" class="bulleted-list"><li>Verticalmente: consigo aumentar a capacidade de uma maquina ou seja, aumentar capacidade de RAM, Núcleo, Processadores, apenas com alguns cliques. </li></ul><ul id="249ca12b-38a1-4cba-9854-b24d28f38a70" class="bulleted-list"><li>Horizontalmente: ao invés de aumentar a capacidade da minha maquina, eu consigo criar varias maquinas em paralelo e expandir a infraestrutura.</li></ul></details></li></ul><ul id="6c4bd25b-9a01-4817-8e4a-579ae8cf909b" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid"><em><strong>Agilidade (Agility)</strong></em></span></summary><ul id="35b44b65-9c6a-4204-981e-49a45e9cd37c" class="bulleted-list"><li>É a facilidade que conseguimos fazer um deploy(Impantar, colocar no ar uma aplicação.)</li></ul><ul id="a59ce9a3-58d8-44ef-b8a1-c7bc1ea31fe8" class="bulleted-list"><li>Exp: Preparar um servidor, aviria vários passos como: preparar o hardware, botar no req, instalar aplicação, testar ... 
+Hoje apenas com dois cliques a maquina já vem pronta para que eu coloque a aplicação, fazendo com que eu ganhe muita rapidez utilizando o serviço de nuvem.</li></ul><p id="cf6a8104-4bdb-4d96-bbe7-2e53475a0780" class="">
+</p></details></li></ul><ul id="650d5ae8-2a13-4b29-8ddf-a2d3ad90d5ca" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid"><em><strong>Recuperação de Desastres (Disaster Recovery)</strong></em></span></summary><ul id="714a93da-26f6-4419-96e3-bbfc6aa97218" class="bulleted-list"><li>Além da agilidade, você tem a garantia de que os dados não vão ser perdidos.</li></ul><ul id="524226b5-44de-43f2-9d11-f8ec3c92ab68" class="bulleted-list"><li>Esses dados podem ser replicados, caso haja um desastre um uma suposta região os seus dados estarão salvos em outra suposta &quot;região B&quot;</li></ul><p id="c6eeceda-967e-4366-b08d-f1ddebf46bef" class="">
+</p></details></li></ul><ul id="8d6df810-7f81-4f65-bee8-9feaa0894aee" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid"><em><strong>Desvantagens</strong></em></span> </summary><ul id="6dd2e1b9-e8df-428f-9943-58e9e5329ca9" class="bulleted-list"><li>Uma das desvantagens na utilização da computação em nuvem pode ser o acesso a sua infraestrutura na nuvem, sendo que o nível mais fraco pode estar sendo a sua internet.</li></ul><p id="bfcb8070-0eb5-44ee-a272-e7bda6a9219b" class="">
+</p><p id="6276d5f1-b369-407e-90a2-28cd14e1cac1" class="">
+</p></details></li></ul><ul id="4872ea7f-f6d4-4c30-a21a-d87b5030377c" class="toggle"><li><details open=""><summary>Por que a computação em nuvem é normalmente mais barata de usar?</summary><ul id="d5399320-c9c3-48d5-b3e2-4950e8b3af73" class="bulleted-list"><li>A computação em nuvem é a entrega de serviços de computação pela Internet usando um modelo de precificação pré-pago. Normalmente, você paga apenas pelos serviços em nuvem que usa, o que o ajuda a: <span style="border-bottom:0.05em solid"><strong>Reduzir custos operacionais</strong></span>, <span style="border-bottom:0.05em solid"><strong>Executa a sua infraestrutura com mais eficiência</strong></span>, <span style="border-bottom:0.05em solid"><strong>Dimensione conforme sua necessidade.</strong></span></li></ul></details></li></ul><h1 id="6b3a6986-b5fb-498a-80c0-2c00810be17d" class="">Modelos de Serviços em Nuvem.</h1><ul id="69d9b388-7fc9-458e-bee4-71152f5bf21a" class="toggle"><li><details open=""><summary><em><span style="border-bottom:0.05em solid"><strong>SaaS</strong></span></em></summary><figure id="d1bcd614-8f0c-4ce6-8c71-8983df0d4179" class="image"><a href="AZURE%20-AZ900%20d1bcd6148f0c4ce68c718983df0d4179/Untitled.png"><img style="width:1266px" src="AZURE%20-AZ900%20d1bcd6148f0c4ce68c718983df0d4179/Untitled.png"/></a></figure><ul id="9867b98f-8d38-4f69-ae89-82f327f8b32c" class="bulleted-list"><li>O SaaS eu não tenho a necessidade de cuidar de nenhum dos serviços anteriores, pois apenas vou utilizar os serviços.</li></ul><ul id="d2f538b0-79f8-4728-8bf8-9ed32eec2d63" class="bulleted-list"><li>Exemplo: Parte de inteligência artificial, machine learning eu não precisarei cuidar de algoritmos nem de nada, apenas utilizarei os serviços (entrarei com os meus dados) para me entregar as informações.</li></ul></details></li></ul><ul id="585d0d1a-3073-4e15-85a6-9be5d114a9c6" class="toggle"><li><details open=""><summary><strong><span style="border-bottom:0.05em solid"><em>PaaS (</em></span></strong><strong>Plataforma como serviço).</strong></summary><figure id="d2799a52-dd48-4ad4-87c7-99150997a0c7" class="image"><a href="AZURE%20-AZ900%20d1bcd6148f0c4ce68c718983df0d4179/Untitled%201.png"><img style="width:1036px" src="AZURE%20-AZ900%20d1bcd6148f0c4ce68c718983df0d4179/Untitled%201.png"/></a></figure><ul id="cc6f5275-6abd-4cb3-bed8-c053cdfa2ec7" class="bulleted-list"><li>A diferença do <span style="border-bottom:0.05em solid"><strong>PaaS</strong></span> para o <span style="border-bottom:0.05em solid"><strong>IaaS</strong></span>, é que eu não preciso tomar conta nem do sistema operacional.</li></ul><ul id="8f362868-d088-47df-b8c9-54160af4632b" class="bulleted-list"><li>Não preciso pegar uma maquina, fazer a instalação no database! Apenas utilizo o database como uma plataforma.</li></ul></details></li></ul><ul id="e9b6bdb3-1edb-4cf7-86a4-d942e3a76d43" class="toggle"><li><details open=""><summary><em><span style="border-bottom:0.05em solid"><strong>IaaS (</strong></span></em><strong>Infraestrutura com o serviço).</strong></summary><figure id="487ff6ca-42c7-4212-b0fd-14cc8f190b13" class="image"><a href="AZURE%20-AZ900%20d1bcd6148f0c4ce68c718983df0d4179/Untitled%202.png"><img style="width:924px" src="AZURE%20-AZ900%20d1bcd6148f0c4ce68c718983df0d4179/Untitled%202.png"/></a></figure><ul id="3569813e-cbbc-4fe6-b14a-9d1c050f8002" class="bulleted-list"><li>Não precisa se preocupar com o hardware, pois não será de responsabilidade do usuário, não necessitara de manutenções. Isso tudo é mantido pelo provedor de nuvem. </li></ul><ul id="005c4c61-4eb9-4911-95c7-2ec050d9b88d" class="bulleted-list"><li>Necessita tomar conta das Aplicações, Servidores, Sistemas Operacionais, Aplicações de Path, etc... isso devera ser de responsabilidade sua!</li></ul></details></li></ul><h1 id="40bd772b-81af-4929-a322-c776a20dbb9c" class="">Computação sem Servidor.</h1><p id="a4e6740e-7a72-4f8e-8865-d6f5fbce2583" class="">A computação serverless permite aos desenvolvedores aplicações com rapidez sem necessidade de gerenciar a infraestrutura. Ou seja eu não preciso me preocupar em qual hadware, a onde ou como ele ira rodar. </p><ul id="499fd446-7d40-4e7f-90e4-40d0effeceac" class="bulleted-list"><li>Esse Hardware será gerenciado automaticamente para mim.</li></ul><ul id="3373f8f3-9229-4841-bc25-5db2c87dddeb" class="bulleted-list"><li>Com o serverless ele é totalmente transparente, coloquei o código lá  ele precisara de 30,40 computadores é totalmente transparente. </li></ul><h1 id="e7c0b666-0789-440c-97d1-8b3d28c6d78b" class="">Tipos de Nuvens (Cloud Types)</h1><figure id="e05d205d-ad30-444b-abfa-0ffb6cf90330" class="image"><a href="AZURE%20-AZ900%20d1bcd6148f0c4ce68c718983df0d4179/Untitled%203.png"><img style="width:577px" src="AZURE%20-AZ900%20d1bcd6148f0c4ce68c718983df0d4179/Untitled%203.png"/></a></figure><ul id="a4d4381f-21c7-4c44-92aa-390abbf61d84" class="toggle"><li><details open=""><summary><em><strong><span style="border-bottom:0.05em solid">No Local (On Premises)</span></strong></em></summary><ul id="16627479-f2cb-4136-b92d-9498bb98abc8" class="bulleted-list"><li>Seria tudo que esta dentro de &quot;casa&quot;, dentro do meu data center eu que administro.</li></ul><ul id="516217df-5fc3-4664-8f48-6ca2103f7270" class="bulleted-list"><li>Resumo: Cuidado e Gerenciado Por mim</li></ul></details></li></ul><ul id="1a7ff682-b8e2-4e07-ad95-0a5d0334d81e" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid"><strong>Nuvem Híbrida</strong></span><span style="border-bottom:0.05em solid"><strong><em> (Hybrid Cloud)</em></strong></span></summary><ul id="916b6467-a674-41d9-a92d-52500db5eeb0" class="bulleted-list"><li>Seria tudo uma mistura de uma parte que eu tenho em casa e outra parte que esta no provedor.</li></ul><ul id="6d34827b-4997-4bdf-b039-890eb1ac3fdb" class="bulleted-list"><li>Resumo: Tenho parte Local e parte em uma nuvem publica</li></ul></details></li></ul><ul id="849d49f8-8d42-4fc4-b2cc-ae84ff2d0470" class="toggle"><li><details open=""><summary><span style="border-bottom:0.05em solid"><strong>Nuvem Publica</strong></span><span style="border-bottom:0.05em solid"><strong><em> (Public Cloud)</em></strong></span></summary><ul id="0ef2981f-d887-4eb2-a0f1-578426030961" class="bulleted-list"><li>Nuvem publica é um provedor de serviço, exemplo a própria azure, que é onde colocamos nossas aplicações.</li></ul><ul id="ca197db2-c269-4c61-adbf-c534941cb0e4" class="bulleted-list"><li>Esse provedor tem o nome de Nuvem Publica (public cloud), que é parte de um servidor(provedor) que você utilizara e que outras pessoas também utilizam.</li></ul></details></li></ul><h1 id="9d8a1272-97c9-4aa3-b682-f7817e48775c" class="">Arquitetura Global da Azure.</h1><p id="876b9580-320b-456e-8c68-3a61972f4cf4" class="">A infraestrutura global  da azure é dividida em dois componentes a <strong>Infraestrutura fisica</strong> e a <strong>Conectividade via os componente de rede</strong></p><figure id="534c238d-1492-4151-beb1-77e982638e8d" class="image"><a href="AZURE%20-AZ900%20d1bcd6148f0c4ce68c718983df0d4179/Untitled%204.png"><img style="width:374px" src="AZURE%20-AZ900%20d1bcd6148f0c4ce68c718983df0d4179/Untitled%204.png"/></a></figure><p id="f5c32f83-aac6-469c-8bc8-4e5e8315f9d3" class="">Link do mapa das geografias de aplicação: <a href="https://azure.microsoft.com/en-us/global-infrastructure/geographies/">https://azure.microsoft.com/en-us/global-infrastructure/geographies/</a></p><ul id="f7e769f9-6523-40c0-8089-c28eef80c0b4" class="toggle"><li><details open=""><summary>Terminologia</summary><ul id="4b9e43f3-27ed-4e0a-af4c-502919c92f4a" class="bulleted-list"><li>Geografia: Brasil, uma geografia ela é formada por varias regiões</li></ul><ul id="28745156-d889-4362-a20d-48616cf3c87c" class="bulleted-list"><li>Região: São Paulo, cada região funcionara de maneira separada. Cada região sempre vai estar pareada(conectada) com outras regiões na mesma geografia de acordo com as milhas especificadas. Caso falhe uma região a mais próxima será o par dela. </li></ul><ul id="be68d215-98ba-4012-98fb-b222e0468bf0" class="bulleted-list"><li>Zonas de Disponibilidade: São datas centers fisicamente separadas em uma região da azure, cada um dos datas centers são equipados com energia, refrigeração e redes independentes, Exemplo 3 zona no brazil de disponibilidade, cada zona é independente, caso uma pare a outra não será afetada.</li></ul></details></li></ul><h1 id="c8e7203f-2efb-41ac-afef-f10639bf3459" class="">Azure Marketplace.</h1><figure id="b5bbaec9-3938-424c-8485-0bc7ff57f4b4" class="image"><a href="AZURE%20-AZ900%20d1bcd6148f0c4ce68c718983df0d4179/Untitled%205.png"><img style="width:1440px" src="AZURE%20-AZ900%20d1bcd6148f0c4ce68c718983df0d4179/Untitled%205.png"/></a></figure><p id="1708b125-34fd-44e8-85fd-9bbf0999c75e" class="">Dentro da azure temos recursos prontos para poder montar senários como (provisiona uma instancia virtual, colocar aplicação, configurar banco...) com apenas um clique conseguimos montar esses recursos que estão disponíveis dentro dos marketplace.</p><p id="7123cdd1-cb82-4604-8943-c95f6734f3a7" class="">Sempre que quiser colocar alguma aplicação, colocar algum sistema seja de banco de dados ou machine learning entre outros, consulte o marketplace pois poderá haver alguma aplicação já feita.</p><h1 id="e955d4e7-99b8-4d3a-b812-78991d946698" class="">Preços da Azure.</h1><p id="31b32d01-07ef-40a1-94ad-14cdbbd83229" class=""><a href="https://azure.microsoft.com/en-us/pricing/">https://azure.microsoft.com/en-us/pricing/</a></p><p id="650de037-7cb8-412e-b93f-1ff399a67ec2" class="">
+</p></div></article></body></html>
