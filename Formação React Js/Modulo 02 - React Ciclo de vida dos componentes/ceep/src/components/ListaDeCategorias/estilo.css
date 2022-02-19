@@ -1,0 +1,29 @@
+.lista-categorias{
+    background-color: var(--fundo);
+    flex-grow: 3;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    list-style-type: none;
+    padding-left: 24px;
+    padding-top: 24px;
+}
+
+/*.lista-categorias_lista{
+
+}*/
+
+.lista-categorias_item{
+    font-size: 20px;
+    color: white;
+    padding: 3px 8px 3px 8px;
+    border-radius: 10px;
+    background-color: #373f51;
+    margin: 12px;
+    max-width: 240px;
+    max-height: 400px;
+    display: inline;
+}
+
+/*.lista-categorias_input{
+
+}*/
