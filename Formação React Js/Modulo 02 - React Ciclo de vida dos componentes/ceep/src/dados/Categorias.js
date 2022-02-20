@@ -4,19 +4,23 @@ export default class Categorias{
         this._inscritos = [];
     }
 
-    adicionarCategoria(novaCategoria){
-        this.categorias.push(novaCategoria);
-    }
-
     inscrever(func){
         this._inscritos.push(func);
     }
 
-    notificar(){
-        this._inscritos.forEach(func => {
-            func(this.categorias);
-        });
+    desinscrever(func){
+        console.log(this._inscritos.length)
+        this._inscritos = this._inscritos.filter(f => f !== func);
+        console.log(this._inscritos.length)
     }
 
-
+    notificar(){
+        this._inscritos.forEach(func =>{
+            func(this.categorias);
+        } );
+    }
+    adicionarCategoria(novaCaegoria){
+        this.categorias.push(novaCaegoria);
+        this.notificar();
+    }
 }
