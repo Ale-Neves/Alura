@@ -12,7 +12,10 @@ function FormularioCadastro({aoEnviar, validacoes}) {
     <DadosUsuario aoEnviar={colotaDados}/>,
     <DadosPessoais aoEnviar={colotaDados}/>,
     <DadosEntrega aoEnviar={colotaDados}/>,
-    <Typography variant="h5">Obrigado pelo Cadastro!</Typography>
+    <Typography 
+      style={{ textAlign: "center", marginTop: "20px", fontSize: "xx-large"}} 
+      variant="h5">Obrigado pelo Cadastro!
+    </Typography>
   ];
 
   useEffect(()=>{

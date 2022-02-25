@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <Container component="article" maxWidth="sm">
-        <Typography align="center" component="h1" variant="h3">Formulário de cadastro</Typography>
+        <Typography style={{marginTop: "29px"}} align="center" component="h1" variant="h3">Formulário de cadastro</Typography>
         <ValidacoesCadastro.Provider 
           value={{cpf:validarCPF, senha:validarSenha, nome:validarNome}}
         >
@@ -22,6 +22,5 @@ class App extends Component {
 }
 
 function aoEnviarForm(dados){
-  console.log(dados);
 }
 export default App;

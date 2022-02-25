@@ -40,6 +40,7 @@ function DadosEntrega({aoEnviar}) {
             />
 
             <TextField
+                style={{ marginRight: "15px"}}
                 value={numero}
                 onChange={(event)=>{
                     setNumero(event.target.value);
